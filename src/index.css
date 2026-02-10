@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GreatVacs Design System
+   All colors are HSL. All tokens should be referenced via Tailwind utilities.
+   NEVER use raw hex/rgb values in components. */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Primary: Deep Trust Blue #1E3A8A */
+    --primary: 224 64% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Medium Blue #2563EB */
+    --secondary: 221 83% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: Light Gray #F3F4F6 */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Accent Blue #3B82F6 */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Extended Palette */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 215 28% 17%;
+
+    --light-blue: 214 95% 93%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 64% 33%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  /* No dark mode - trust-focused professional design stays light */
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-10 md:py-14 lg:py-16;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
